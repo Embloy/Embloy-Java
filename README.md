@@ -13,7 +13,7 @@ Add Embloy-Java SDK:
   - https://mvnrepository.com/artifact/com.embloy/sdk or
   - https://github.com/embloy/embloy-java/releases/latest
 */
-implementation "com.embloy:sdk:0.1.0"
+implementation "com.embloy:sdk:0.1.4-SNAPSHOT"
 ```
 
 ```XML title="pom.xml"
