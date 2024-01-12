@@ -60,9 +60,9 @@ public class ExampleClass {
 ```Bash
 javac src/main/java/embloy/EmbloyClient.java src/main/java/embloy/EmbloySession.java
 
-mvn clean deploy
+mvn clean install # you'll be prompted to insert your gpg key passphrase
 
-mvn clean deploy -P release
+mvn clean deploy # or alternatively mvn clean deploy -P release
 ```
 
 ---
