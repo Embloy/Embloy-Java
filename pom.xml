@@ -3,7 +3,7 @@
    <modelVersion>4.0.0</modelVersion>
    <groupId>com.embloy</groupId>
    <artifactId>sdk</artifactId>
-   <version>0.1.1</version>
+   <version>0.1.2</version>
    <packaging>jar</packaging>
    <properties>
       <maven.compiler.source>1.8</maven.compiler.source>
@@ -32,7 +32,7 @@
       <connection>scm:git:https://github.com/embloy/embloy-java.git</connection>
       <developerConnection>scm:git:https://github.com/embloy/embloy-java.git</developerConnection>
       <url>https://github.com/embloy/embloy-java</url>
-     <tag>sdk-0.1.1</tag>
+     <tag>sdk-0.1.2</tag>
   </scm>
    <developers>
       <developer>
