@@ -10,31 +10,29 @@ Add Embloy-Java SDK:
 /*
   For Gradle, add the following dependency to your build.gradle and replace with
   the version number you want to use from:
-  - https://mvnrepository.com/artifact/com.embloy/embloy-java or
+  - https://mvnrepository.com/artifact/com.embloy/sdk or
   - https://github.com/embloy/embloy-java/releases/latest
 */
-implementation "com.embloy:embloy-java:24.0.0"
+implementation "com.embloy:sdk:0.1.0"
 ```
 
 ```XML title="pom.xml"
 <!--
   For Maven, add the following dependency to your POM and replace with the
   version number you want to use from:
-  - https://mvnrepository.com/artifact/com.embloy/embloy-java or
+  - https://mvnrepository.com/artifact/com.embloy/sdk or
   - https://github.com/embloy/embloy-java/releases/latest
 -->
 <dependency>
   <groupId>com.embloy</groupId>
-  <artifactId>embloy-java</artifactId>
-  <version>24.0.0</version>
+  <artifactId>sdk</artifactId>
+  <version>0.1.0</version>
 </dependency>
 ```
 
 Integrate it in your service:
 
 ```Java title="main.java"
-javac -cp .:lib main.java && java -cp .:lib main
-
 import embloy.EmbloyClient;
 import embloy.EmbloySession;
 
