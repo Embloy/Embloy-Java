@@ -26,7 +26,7 @@ implementation "com.embloy:sdk:0.1.0"
 <dependency>
   <groupId>com.embloy</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.1.1-SNAPSHOT</version>
+  <version>0.1.4-SNAPSHOT</version>
 </dependency>
 ```
 
