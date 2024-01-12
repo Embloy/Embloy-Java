@@ -57,8 +57,12 @@ public class ExampleClass {
 
 ## Build package from source
 
-```Java
-javac lib/embloy/EmbloyClient.java lib/embloy/EmbloySession.java
+```Bash
+javac src/main/java/embloy/EmbloyClient.java src/main/java/embloy/EmbloySession.java
+
+mvn clean deploy
+
+mvn clean deploy -P release
 ```
 
 ---

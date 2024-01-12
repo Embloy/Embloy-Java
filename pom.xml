@@ -1,79 +1,32 @@
-It seems like you are asking about Maven project configuration files (settings.xml and pom.xml). These files are used in Java projects managed by Maven.
-
-Here's a basic example of how your settings.xml file might look:
-settings.xml
-
-xml
-
-<settings xmlns="http://maven.apache.org/SETTINGS/1.0.0"
-          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-          xsi:schemaLocation="http://maven.apache.org/SETTINGS/1.0.0
-                              http://maven.apache.org/xsd/settings-1.0.0.xsd">
-
-    <servers>
-        <server>
-            <id>embloy-repo</id>
-            <username>your-username</username>
-            <password>your-password</password>
-        </server>
-    </servers>
-
-</settings>
-
-Replace your-username and your-password with your Maven repository credentials.
-
-Now, for the pom.xml file:
-pom.xml
-
-xml
-
 <project xmlns="http://maven.apache.org/POM/4.0.0"
          xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0
-                             http://maven.apache.org/xsd/maven-4.0.0.xsd">
-
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
     <modelVersion>4.0.0</modelVersion>
-
-    <groupId>com.yourcompany</groupId>
-    <artifactId>embloy-sdk</artifactId>
-    <version>1.0.0</version>
-    <packaging>jar</packaging>
-
+    
+    <groupId>com.embloy</groupId>
+    <artifactId>sdk</artifactId>
+    <version>0.1.0</version>
+    
     <properties>
-        <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
+        <maven.compiler.source>1.8</maven.compiler.source>
+        <maven.compiler.target>1.8</maven.compiler.target>
     </properties>
 
-    <repositories>
-        <repository>
-            <id>embloy-repo</id>
-            <url>https://embloy.com/maven-repo</url>
-        </repository>
-    </repositories>
-
     <dependencies>
-        <!-- Add your dependencies here -->
+        <!-- Add your dependencies here if needed -->
     </dependencies>
-
+    
     <build>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
-                <artifactId>maven-jar-plugin</artifactId>
-                <version>3.1.0</version>
+                <artifactId>maven-compiler-plugin</artifactId>
+                <version>3.8.1</version>
                 <configuration>
-                    <archive>
-                        <manifest>
-                            <addClasspath>true</addClasspath>
-                            <classpathPrefix>lib/</classpathPrefix>
-                            <mainClass>com.yourcompany.embloy.sdk.YourMainClass</mainClass>
-                        </manifest>
-                    </archive>
+                    <source>1.8</source>
+                    <target>1.8</target>
                 </configuration>
             </plugin>
         </plugins>
     </build>
-
 </project>
-
-Remember, these are just basic examples, and you may need to customize them based on your project structure and requirements.
