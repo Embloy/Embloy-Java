@@ -26,7 +26,7 @@ implementation "com.embloy:sdk:0.1.0"
 <dependency>
   <groupId>com.embloy</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.1.0</version>
+  <version>0.1.1-SNAPSHOT</version>
 </dependency>
 ```
 
@@ -61,6 +61,8 @@ public class ExampleClass {
 javac src/main/java/embloy/EmbloyClient.java src/main/java/embloy/EmbloySession.java
 
 mvn clean install # you'll be prompted to insert your gpg key passphrase
+
+mvn release:clean release:prepare release:perform
 
 mvn clean deploy # or alternatively mvn clean deploy -P release
 ```
