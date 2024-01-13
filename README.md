@@ -13,7 +13,17 @@ Add Embloy-Java SDK:
   - https://mvnrepository.com/artifact/com.embloy/sdk or
   - https://github.com/embloy/embloy-java/releases/latest
 */
-implementation "com.embloy:sdk:0.1.4-SNAPSHOT"
+implementation "com.embloy:sdk:0.1.6"
+```
+
+```Java title="build.gradle.kts"
+/*
+  For Gradle with Kotlin, add the following dependency to your build.gradle.kts and replace with
+  the version number you want to use from:
+  - https://mvnrepository.com/artifact/com.embloy/sdk or
+  - https://github.com/embloy/embloy-java/releases/latest
+*/
+implementation("com.embloy:sdk:0.1.6")
 ```
 
 ```XML title="pom.xml"
@@ -26,7 +36,7 @@ implementation "com.embloy:sdk:0.1.4-SNAPSHOT"
 <dependency>
   <groupId>com.embloy</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.1.4-SNAPSHOT</version>
+  <version>0.1.6</version>
 </dependency>
 ```
 
