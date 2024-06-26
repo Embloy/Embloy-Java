@@ -10,7 +10,7 @@ public class EmbloySession {
         this.mode = mode;
         this.jobSlug = jobSlug;
         this.successUrl = successUrl;
-        this.cancelUrl = cancelUrl;        
+        this.cancelUrl = cancelUrl;
     }
 
     public EmbloyRequestMode getMode() {
@@ -30,16 +30,29 @@ public class EmbloySession {
     }
 
     public enum EmbloyRequestMode {
-        JOB_MODE("job");
-    
+        JOB_MODE("job"),
+        ASHBY_MODE("ashby"),
+        LEVER_MODE("lever"),
+        SOFTGARDEN_MODE("softgarden"),
+        GREENHOUSE_MODE("greenhouse");
+
         private final String value;
-    
+
         EmbloyRequestMode(String value) {
             this.value = value;
         }
-    
+
         public String getValue() {
             return value;
+        }
+
+        public static EmbloyRequestMode fromValue(String value) {
+            for (EmbloyRequestMode mode : values()) {
+                if (mode.getValue().equals(value)) {
+                    return mode;
+                }
+            }
+            throw new IllegalArgumentException("Unknown value: " + value);
         }
     }
 }

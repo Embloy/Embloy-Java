@@ -24,6 +24,7 @@ public class EmbloyClient {
 
     public String makeRequest() throws Exception {
         String endpoint = String.format(ENDPOINT_TEMPLATE, baseUrl, apiVersion);
+        @SuppressWarnings("deprecation")
         URL url = new URL(endpoint);
         HttpURLConnection connection = (HttpURLConnection) url.openConnection();
 

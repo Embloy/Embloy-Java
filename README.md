@@ -13,7 +13,7 @@ Add Embloy-Java SDK:
   - https://mvnrepository.com/artifact/com.embloy/sdk or
   - https://github.com/embloy/embloy-java/releases/latest
 */
-implementation "com.embloy:sdk:0.1.6"
+implementation "com.embloy:sdk:0.1.7"
 ```
 
 ```Java title="build.gradle.kts"
@@ -23,7 +23,7 @@ implementation "com.embloy:sdk:0.1.6"
   - https://mvnrepository.com/artifact/com.embloy/sdk or
   - https://github.com/embloy/embloy-java/releases/latest
 */
-implementation("com.embloy:sdk:0.1.6")
+implementation("com.embloy:sdk:0.1.7")
 ```
 
 ```XML title="pom.xml"
@@ -36,7 +36,7 @@ implementation("com.embloy:sdk:0.1.6")
 <dependency>
   <groupId>com.embloy</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.1.6</version>
+  <version>0.1.7</version>
 </dependency>
 ```
 
