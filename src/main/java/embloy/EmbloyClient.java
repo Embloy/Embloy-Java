@@ -31,6 +31,8 @@ public class EmbloyClient {
 
         // Set up the request
         connection.setRequestMethod("POST");
+        connection.setRequestProperty("Content-Type", "application/x-www-form-urlencoded");
+        connection.setRequestProperty("User-Agent", "Mozilla/5.0 (compatible; embloy-java/0.1.14)");    
         connection.setRequestProperty("client_token", clientToken);
         connection.setDoOutput(true);
 
