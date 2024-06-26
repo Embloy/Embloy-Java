@@ -14,6 +14,7 @@ public class EmbloyClient {
     private final String apiVersion;
 
     private static final String ENDPOINT_TEMPLATE = "%s/%s/sdk/request/auth/token";
+    private static final String REDIRECT_URL_TEMPLATE = "https://embloy.com/sdk/apply?request_token=%s";
 
     public EmbloyClient(String clientToken, EmbloySession session) {
         this.clientToken = clientToken;
@@ -50,7 +51,11 @@ public class EmbloyClient {
         int responseCode = connection.getResponseCode();
         if (responseCode == HttpURLConnection.HTTP_OK) {
             try (Scanner scanner = new Scanner(connection.getInputStream())) {
-                return scanner.useDelimiter("\\A").next();
+                String responseBody = scanner.useDelimiter("\\A").next();
+                // Extract request_token from the response
+                String requestToken = extractRequestToken(responseBody);
+                // Construct and return the redirect URL
+                return String.format(REDIRECT_URL_TEMPLATE, requestToken);
             } catch (Exception e) {
                 throw new Exception("Error reading response: " + e.getMessage(), e);
             }
@@ -76,5 +81,13 @@ public class EmbloyClient {
         } catch (java.io.UnsupportedEncodingException e) {
             throw new RuntimeException(e.getMessage(), e);
         }
+    }
+
+    // Simple method to extract the request_token from the JSON response
+    private String extractRequestToken(String jsonResponse) {
+        String tokenPrefix = "\"request_token\":\"";
+        int startIndex = jsonResponse.indexOf(tokenPrefix) + tokenPrefix.length();
+        int endIndex = jsonResponse.indexOf("\"", startIndex);
+        return jsonResponse.substring(startIndex, endIndex);
     }
 }

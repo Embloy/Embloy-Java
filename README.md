@@ -23,7 +23,7 @@ implementation "com.embloy:sdk:0.1.7"
   - https://mvnrepository.com/artifact/com.embloy/sdk or
   - https://github.com/embloy/embloy-java/releases/latest
 */
-implementation("com.embloy:sdk:0.1.7")
+implementation("com.embloy:sdk:0.1.13")
 ```
 
 ```XML title="pom.xml"
@@ -36,7 +36,7 @@ implementation("com.embloy:sdk:0.1.7")
 <dependency>
   <groupId>com.embloy</groupId>
   <artifactId>sdk</artifactId>
-  <version>0.1.7</version>
+  <version>0.1.13</version>
 </dependency>
 ```
 
@@ -65,7 +65,7 @@ public class ExampleClass {
 }
 ```
 
-## Build package from source
+## Build package from source ([Reference](https://central.sonatype.org/publish-ea/publish-ea-guide/))
 
 ```Bash
 javac src/main/java/embloy/EmbloyClient.java src/main/java/embloy/EmbloySession.java
@@ -78,6 +78,34 @@ mvn clean deploy # or alternatively mvn clean deploy -P release
 ```
 
 ---
+
+:::note
+Make sure to have set up correct credentials in your `settings.xml` file ([Reference](https://central.sonatype.org/publish/generate-portal-token/#050))
+
+```xml
+<settings>
+    <profiles>
+        <profile>
+            <id>central</id>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <properties>
+                <gpg.executable>gpg2</gpg.executable>
+                <gpg.passphrase>passphrase</gpg.passphrase>
+            </properties>
+        </profile>
+    </profiles>
+    <servers>
+        <server>
+            <id>central</id>
+            <username>token_id</username>
+            <password>token_secret</password>
+        </server>
+    </servers>
+</settings>
+```
+:::
 
 © Carlo Bortolan, Jan Hummel
 
