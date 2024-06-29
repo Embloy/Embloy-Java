@@ -1,4 +1,4 @@
-# Embloy Java
+# [Embloy Java](https://search.maven.org/artifact/com.embloy/sdk) &middot; [![GitHub license](https://img.shields.io/badge/license-AGPL3.0-blue.svg)](https://github.com/Embloy/Embloy-Java/blob/main/LICENSE) [![Maven Central](https://img.shields.io/maven-central/v/com.embloy/sdk.svg?style=flat)](https://search.maven.org/artifact/com.embloy/sdk) [![Issues](https://img.shields.io/github/issues/Embloy/Embloy-Java)](https://github.com/Embloy/Embloy-Java/issues) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg)](https://github.com/Embloy/Embloy-Java/pulls)
 
 Embloy's Java SDK for interacting with your Embloy integration.
 
